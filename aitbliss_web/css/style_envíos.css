@@ -1,0 +1,471 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* .....1..... */
+
+#header-up{
+	width: 100%;
+	height:190px;
+	background-color:#ffffff;
+	display: flex;
+  	justify-content: center; 
+  	align-items: center;    
+  	width: 100%;	
+	
+}
+
+.header-logo-center{
+	align-items: center;
+}
+
+
+/* .....2..... */
+
+
+
+#header-up2{
+	justify-content:space-between;
+	display: flex;
+	background-color: #F6BBC7;
+}
+
+#header-menu-down{
+	display: flex;
+	height: 60px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #F6BBC7;
+	
+}
+
+.header-menu-down-lest ul li{
+	float: left;
+	list-style: none;
+	margin-right: 10px;
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 24px;
+	margin-left: 70px;
+}
+
+.header-menu-down-lest ul li:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Quita los puntos de la lista (ul) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Hace que los elementos se pongan uno al lado del otro */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* ESTO QUITA EL SUBRAYADO Y CAMBIA EL COLOR */
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #FFFFFF;       /* Cambia el color (pon el que tú quieras) */
+     font-family: "Caveat Brush", cursive;
+    
+}
+
+/* Cambia el color cuando pasas el mouse por encima */
+nav ul li a:hover {
+    color: #FFE3E8;       /* Color naranja al pasar el mouse */
+}
+
+
+/* .....2/2..... */
+
+
+.header-icons-right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	margin-right: 30px;
+	color: #ffffff;
+}
+
+.header-icons-right-color{
+	font-size: 17pt
+}
+
+.header-icons-right-color-2{
+	font-size: 20pt
+}
+
+.header-icons-right-color:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+
+/* ========================
+            body
+========================= */
+
+
+
+.seccion-galeria {
+    display: flex;
+    justify-content: center; /* Centra los 3 elementos horizontalmente */
+    align-items: center;     /* Los alinea al medio verticalmente */
+    gap: 60px;               /* Espacio entre el título y los círculos */
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.contenido-central {
+    text-align: center;
+}
+
+.titulo-galeria {
+    font-size: 55px;
+    font-family: 'Arial Black', sans-serif;
+    color: #333;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Línea rosada debajo del título */
+.linea-decorativa {
+    width: 80px;
+    height: 4px;
+    background-color: #f4b6c2; /* Rosa AitBliss */
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.subtitulo-galeria {
+    font-size: 18px;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Estilo de los círculos laterales */
+.circulo-imagen {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;       /* Hace que sea un círculo perfecto */
+    overflow: hidden;         /* Corta la imagen en forma de círculo */
+    border: 5px solid #f4b6c2; /* Borde rosa suave */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease; /* Animación */
+}
+
+.circulo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Evita que la imagen se deforme */
+}
+
+/* --- INTERACCIÓN --- */
+
+/* Al pasar el mouse por la sección, el título se agranda un poco */
+.seccion-galeria:hover .titulo-galeria {
+    transform: scale(1.1);
+}
+
+/* Los círculos también se agrandan al pasar el mouse sobre ellos */
+.circulo-imagen:hover {
+    transform: scale(1.15) rotate(5deg); /* Se agranda y gira un poquito */
+    cursor: pointer;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .seccion-galeria {
+        flex-direction: column; /* Se ponen uno debajo del otro en celular */
+        gap: 30px;
+    }
+}
+
+
+
+/* .....2..... */
+
+
+
+
+
+.seccion-signature {
+    padding: 80px 20px;
+    background-color: #fffafb; /* Un blanco rosado muy suave */
+    text-align: center;
+}
+
+.titulo-signature {
+    font-size: 50px;
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.contenedor-galeria-premium {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.tarjeta-galeria {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    transition: transform 0.4s ease;
+}
+
+.marco-imagen {
+    width: 100%;
+    height: 450px; /* Altura de las fotos */
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #eee;
+}
+
+.marco-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin estirarla */
+    transition: transform 0.6s ease;
+}
+
+/* EFECTO INTERACTIVO: Al pasar el mouse, la imagen hace zoom suave */
+.tarjeta-galeria:hover .marco-imagen img {
+    transform: scale(1.1);
+}
+
+.nombre-categoria {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.detalle-categoria {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;s
+}
+
+
+
+/* .....3..... */
+
+
+
+.contenedor-tiendas {
+    display: flex;
+    flex-wrap: wrap;   /* Para que se ajusten en celulares */
+    width: 100%;
+    min-height: 400px;
+}
+
+.bloque-tienda {
+    flex: 1;
+    min-width: 300px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;     /* Mantiene el texto lejos de las esquinas */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Colores personalizados para AitBliss */
+.tienda-primaria {
+    background-color: #171717; /* Guinda marca */
+    color: #F6BBC7;
+}
+
+.tienda-secundaria {
+    background-color: #F6BBC7; /* Rosa suave marca */
+    color: #171717;
+}
+
+.icono-ubicacion {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.nombre-tienda {
+    font-size: 30px;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.direccion-texto {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.linea-decorativa {
+    width: 50px;
+    height: 3px;
+    background-color: currentColor; /* Usa el color del texto actual */
+    margin: 0 auto 15px;
+    opacity: 0.5;
+}
+
+.horario-mini {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Interacción al pasar el mouse */
+.bloque-tienda:hover {
+    filter: brightness(1.1);
+    cursor: default;
+}
+
+
+
+
+/* .....4..... */
+
+
+
+
+
+
+
+
+
+
+
+/* ========================
+          footer
+========================= */
+
+
+
+.sitio-footer {
+    background-color: #F6BBC7;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #eee;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-lista li {
+    margin-bottom: 12px;
+    color: #ffffff;
+    display: flex;
+   
+}
+
+.footer-lista li:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+.asterisco {
+    color: #FF99AD; /* El rojo de los asteriscos */
+    font-size: 30px;
+    margin-right: 10px;
+
+}
+
+.caja-reclamaciones {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.caja-reclamaciones p {
+    font-size: 11px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.telefono {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.foooter-icons-color:hover {
+		color: #FFE3E8;
+	cursor: pointer;
+}
+
+/* 1. Color normal (que no sea negro) */
+.foooter-icons-color {
+    color: #ffffff; /* Cambia este código por el rosa/rojo de tu marca */
+    font-size: 30px;
+    transition: all 0.2s ease; /* Para que el cambio de color sea suave */
+    text-decoration: none;
+}
+
+/* 2. Color al pasar el ratón (opcional, pero recomendado) */
+.enlace-red-social:hover .foooter-icons-color {
+    color: #F07F95; /* Un rosa más claro al poner la flecha encima */
+}
+
+/* 3. Color al PRESIONAR (Lo que pediste) */
+.enlace-red-social:active .foooter-icons-color {
+    color: #F07F95; /* Se pone BLANCO al hacer clic */
+    transform: scale(0.9); /* Efecto de que se hunde al presionarlo */
+}

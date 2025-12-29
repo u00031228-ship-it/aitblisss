@@ -1,0 +1,537 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* .....1..... */
+
+#header-up{
+	width: 100%;
+	height:190px;
+	background-color:#ffffff;
+	display: flex;
+  	justify-content: center; 
+  	align-items: center;    
+  	width: 100%;	
+	
+}
+
+.header-logo-center{
+	align-items: center;
+}
+
+
+/* .....2..... */
+
+
+
+#header-up2{
+	justify-content:space-between;
+	display: flex;
+	background-color: #F6BBC7;
+}
+
+#header-menu-down{
+	display: flex;
+	height: 60px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #F6BBC7;
+	
+}
+
+.header-menu-down-lest ul li{
+	float: left;
+	list-style: none;
+	margin-right: 10px;
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 24px;
+	margin-left: 70px;
+}
+
+.header-menu-down-lest ul li:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Quita los puntos de la lista (ul) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Hace que los elementos se pongan uno al lado del otro */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* ESTO QUITA EL SUBRAYADO Y CAMBIA EL COLOR */
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #FFFFFF;       /* Cambia el color (pon el que tú quieras) */
+     font-family: "Caveat Brush", cursive;
+    
+}
+
+/* Cambia el color cuando pasas el mouse por encima */
+nav ul li a:hover {
+    color: #FFE3E8;       /* Color naranja al pasar el mouse */
+}
+
+
+/* .....2/2..... */
+
+
+.header-icons-right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	margin-right: 30px;
+	color: #ffffff;
+}
+
+.header-icons-right-color{
+	font-size: 17pt
+}
+
+.header-icons-right-color-2{
+	font-size: 20pt
+}
+
+.header-icons-right-color:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+
+/* ========================
+            body
+========================= */
+
+
+.contenedor-conocenos {
+    position: relative; /* Obligatorio para que el texto no se escape */
+    width: 100%;        /* Ocupa todo el ancho */
+    height: 350px;      /* Ajusté a 350px para que se aprecie mejor, puedes cambiarlo */
+    overflow: hidden;   /* Corta lo que sobresalga al agrandar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Hace que la imagen llene el espacio sin deformarse */
+    z-index: 1;
+}
+
+.capa-texto {
+    position: relative;
+    z-index: 2;         /* Pone el texto por delante de la imagen */
+    text-align: center;
+}
+
+.texto-animado {
+    color: white;
+    font-size: 120px;    /* Tamaño grande como título */
+     font-family: "Knewave", system-ui; /* O la fuente elegante de tu logo */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra para que se lea bien */
+    cursor: pointer;
+      font-weight: 400;
+    transition: transform 0.4s ease; /* Duración de la animación */
+}
+
+/* LA ANIMACIÓN DE AGRANDAR */
+.contenedor-conocenos:hover .texto-animado {
+    transform: scale(1.2); /* Se agranda un 20% al pasar el mouse por el contenedor */
+}
+
+/* .....2..... */
+
+
+.seccion-conocenos {
+    display: flex;            /* Pone imagen y texto uno al lado del otro */
+    align-items: center;      /* Los centra verticalmente entre sí */
+    justify-content: center;  /* Los centra en la pantalla */
+    gap: 60px;                /* Espacio entre la imagen y el cuadro de texto */
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.columna-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly; /* Pega la imagen hacia el centro */
+}
+
+.logo-circular {
+    width: 300px;             /* Tamaño de tu logo */
+    height: auto;
+}
+
+.columna-texto {
+    flex: 1;
+}
+
+/* LA CAJA ROSADA (Como en tu imagen 0b8063.png) */
+.caja-rosada {
+    background-color: #FFE3E8; /* El rosa de AitBliss */
+    padding: 40px;
+    border-radius: 30px;       /* Bordes redondeados */
+    max-width: 500px;
+    color: #F593A6;
+    transition: transform 0.3s ease; /* Prepara la animación */
+}
+
+/* EFECTO DE AGRANDAR TODA LA CAJA */
+.caja-rosada:hover {
+    transform: scale(1.05);    /* Se agranda ligeramente al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.titulo-interactivo {
+    font-size: 35px;
+     font-family: "Knewave", system-ui; /* O la fuente elegante de tu logo */
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.descripcion-reposteria {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+/* .........3.......... */
+
+
+
+
+.contenedor-doble {
+    display: flex;
+    width: 100%;
+    min-height: 450px; /* Altura de los cuadrados */
+    flex-wrap: wrap;   /* Para que se apilen en celulares */
+}
+
+.cuadrado {
+    flex: 1;           /* Hace que ambos midan exactamente lo mismo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;     /* Evita que el texto toque las esquinas */
+    text-align: center;
+    min-width: 300px;  /* Evita que se vean muy flacos */
+}
+
+/* Colores de los bloques */
+.bloque-rosa {
+    background-color: #F593A6; /* Color guinda/oscuro de AitBliss */
+    color: white;
+}
+
+.bloque-blanco {
+    background-color: #FFE3E8;
+    color: #171717;
+    border: 1px solid #FFE3E8; /* Borde rosa suave opcional */
+}   
+
+
+.titulo-centro {
+    font-size: 28px;
+    font-family: 'Arial Black', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.texto-centro {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.flecha-centro {
+    font-size: 20px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+.cuadrado { transition: 0.3s; cursor: pointer; }
+.cuadrado:hover { filter: brightness(1.1); }
+
+
+
+
+
+
+/* .........4.......... */
+
+
+
+
+
+/* Contenedor General */
+.seccion-valores {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Título Grande Superior */
+.titulo-principal-valores {
+    font-size: 45px;
+    font-family: "Knewave", system-ui; /* O la fuente elegante de tu logo */
+      font-weight: 400;
+    margin-bottom: 60px;
+    color: #F593A6;
+}
+
+/* Contenedor de los 4 cuadros */
+.contenedor-cuadros {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; 
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada Cuadro Pequeño */
+.cuadro-pequeño {
+    background: #fff;
+    padding: 40px 25px; /* Aumentamos el espacio interno */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    flex: 1;
+    min-width: 220px;
+    max-width: 260px;
+    transition: all 0.3s ease;
+    border: 1px solid #f9f9f9;
+}
+
+/* Animación de agrandar al pasar el mouse */
+.cuadro-pequeño:hover {
+    transform: scale(1.05); /* Se agranda un poco, como pediste antes */
+    box-shadow: 0 10px 25px rgba(244, 182, 194, 0.3); /* Sombra con el rosa de AitBliss */
+}
+
+.icono-valor {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.mini-titulo {
+    font-size: 22px;
+    color: #f4b6c2; /* Rosa de la marca */
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.texto-pequeño {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0; /* Quitamos el margen inferior que sobraba */
+}
+
+
+
+.icono-plano {
+    font-size: 45px;      /* Tamaño del icono */
+    color: #f4b6c2;       /* Rosa AitBliss */
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;         /* Espacio fijo para que todos alineen igual */
+}
+
+
+/* .........5.......... */
+
+
+
+
+
+.seccion-tiktok {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    gap: 50px;               /* Espacio entre el video y los círculos */
+    padding: 60px 20px;
+    background-color: #ffffff;
+    overflow: hidden;        /* Evita que los círculos se salgan en móviles */
+}
+
+.contenedor-video {
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+/* Estilo de los círculos laterales */
+.circulo-decorativo {
+    width: 150px;
+    height: 150px;
+    background-color: #f4b6c2; /* Rosa de tu marca */
+    border-radius: 50%;
+    opacity: 0.6;
+    flex-shrink: 0;           /* Evita que el círculo se aplaste */
+}
+
+/* Variación para el círculo derecho (puedes cambiarle el color si quieres) */
+.decorativo-der {
+    background-color: #8e0b32; /* El guinda de AitBliss */
+}
+
+/* Responsivo: oculta los círculos en pantallas muy pequeñas */
+@media (max-width: 768px) {
+    .circulo-decorativo {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ========================
+          footer
+========================= */
+
+
+
+.sitio-footer {
+    background-color: #F6BBC7;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #eee;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-lista li {
+    margin-bottom: 12px;
+    color: #ffffff;
+    display: flex;
+   
+}
+
+.footer-lista li:hover{
+	color: #FFE3E8;
+	cursor: pointer;
+}
+
+
+.asterisco {
+    color: #FF99AD; /* El rojo de los asteriscos */
+    font-size: 30px;
+    margin-right: 10px;
+
+}
+
+.caja-reclamaciones {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.caja-reclamaciones p {
+    font-size: 11px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.telefono {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.foooter-icons-color:hover {
+		color: #FFE3E8;
+	cursor: pointer;
+}
+
+/* 1. Color normal (que no sea negro) */
+.foooter-icons-color {
+    color: #ffffff; /* Cambia este código por el rosa/rojo de tu marca */
+    font-size: 30px;
+    transition: all 0.2s ease; /* Para que el cambio de color sea suave */
+    text-decoration: none;
+}
+
+/* 2. Color al pasar el ratón (opcional, pero recomendado) */
+.enlace-red-social:hover .foooter-icons-color {
+    color: #F07F95; /* Un rosa más claro al poner la flecha encima */
+}
+
+/* 3. Color al PRESIONAR (Lo que pediste) */
+.enlace-red-social:active .foooter-icons-color {
+    color: #F07F95; /* Se pone BLANCO al hacer clic */
+    transform: scale(0.9); /* Efecto de que se hunde al presionarlo */
+}
